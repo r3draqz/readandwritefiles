@@ -1,14 +1,14 @@
 import csv
 
 CUSTFILE = 'customers.csv'
-CUST_COUNTRY_FILE = 'customer_country.py'
+CUST_COUNTRY_FILE = 'customer_country.csv'
 
 # open customers csv file
 infile = open(CUSTFILE, 'r', newline='')
 outfile = open(CUST_COUNTRY_FILE, 'w', newline='')
 
 # create csv object
-reader = csv.reader(infile, delimiter=',')
+reader = csv.reader(infile)
 writer = csv.writer(outfile, delimiter=',')
 
 # skip field row
@@ -23,9 +23,9 @@ for row in reader:
     country = row[4]
     phone = row[5]
 
-# loop through reader
-cust_country = [firstname, lastname, country]
-writer.writerow(cust_country)
+    # loop through reader
+    cust_country = [firstname, lastname, country]
+    writer.writerow(cust_country)
 
 infile.close()
 outfile.close()
