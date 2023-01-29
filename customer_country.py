@@ -8,7 +8,7 @@ infile = open(CUSTFILE, 'r', newline='')
 outfile = open(CUST_COUNTRY_FILE, 'w', newline='')
 
 # create csv object
-reader = csv.reader(infile)
+reader = csv.reader(infile, delimiter=',')
 writer = csv.writer(outfile, delimiter=',')
 
 # skip field row
