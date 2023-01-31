@@ -16,3 +16,5 @@ for row in reader:
     bonus = row[4]
 
     print(empid, empfname, emplname, salary, bonus)
+
+    input('Press enter to move to the next employee... ')
